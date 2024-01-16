@@ -4,5 +4,5 @@ export class Edition {
     debutSoumission!:Date;
     finSoumission!:Date;
     typeEdition!:String;
-    anneeEdition!:Date;
+    anneeEdition!:string;
 }

@@ -1,0 +1,51 @@
+<section>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z2">
+    <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="Theme">
+      <th mat-header-cell *matHeaderCellDef>Theme</th>
+      <td mat-cell *matCellDef="let element">{{ element.theme }}</td>
+    </ng-container>
+
+    <!-- Description Column -->
+    <ng-container matColumnDef="Description">
+      <th mat-header-cell *matHeaderCellDef>Description</th>
+      <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+    </ng-container>
+
+    <!-- Debut de soumission Column -->
+    <ng-container matColumnDef="Debut de soumission">
+      <th mat-header-cell *matHeaderCellDef>Debut de soumission</th>
+      <td mat-cell *matCellDef="let element">{{ element.debutSoumission }}</td>
+    </ng-container>
+
+    <!-- Fin de soumission Column -->
+    <ng-container matColumnDef="Fin de soumission">
+      <th mat-header-cell *matHeaderCellDef>Fin de soumission</th>
+      <td mat-cell *matCellDef="let element">{{ element.finSoumission }}</td>
+    </ng-container>
+
+    <!-- SType d'Edition Column -->
+    <ng-container matColumnDef="Type d'Edition">
+      <th mat-header-cell *matHeaderCellDef>Type d'Edition</th>
+      <td mat-cell *matCellDef="let element">{{ element.typeEdition }}</td>
+    </ng-container>
+
+    <!--Annee d'Edition Column-->
+    <ng-container matColumnDef="Annee d'Edition">
+      <th mat-header-cell *matHeaderCellDef>Annee d'Edition</th>
+      <td mat-cell *matCellDef="let element">{{ element.anneeEdition }}</td>
+    </ng-container>
+
+    <!--Action d'Edition Column-->
+    <ng-container matColumnDef="Action">
+        <th mat-header-cell *matHeaderCellDef>Action</th>
+        <td mat-cell *matCellDef="let element"><button  mat-raised-button color="primary">voir</button></td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</section>

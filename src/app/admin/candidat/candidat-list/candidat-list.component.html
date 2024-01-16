@@ -1,0 +1,53 @@
+<section>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z2">
+    <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Nom Column -->
+    <ng-container matColumnDef="Nom">
+      <th mat-header-cell *matHeaderCellDef>Nom</th>
+      <td mat-cell *matCellDef="let element">{{ element.nom }}</td>
+    </ng-container>
+
+    <!-- Prenom Column -->
+    <ng-container matColumnDef="Prenom">
+      <th mat-header-cell *matHeaderCellDef>Prenom</th>
+      <td mat-cell *matCellDef="let element">{{ element.prenom }}</td>
+    </ng-container>
+
+    <!-- Email Column -->
+    <ng-container matColumnDef="Email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+    </ng-container>
+
+    <!-- Telephone Column -->
+    <ng-container matColumnDef="Telephone">
+      <th mat-header-cell *matHeaderCellDef>Telephone</th>
+      <td mat-cell *matCellDef="let element">{{ element.telephone }}</td>
+    </ng-container>
+
+    <!--Localite Column-->
+    <ng-container matColumnDef="Localite">
+      <th mat-header-cell *matHeaderCellDef>Localite</th>
+      <td mat-cell *matCellDef="let element">{{ element.localite }}</td>
+    </ng-container>
+
+    <!--Username Column-->
+    <ng-container matColumnDef="Username">
+      <th mat-header-cell *matHeaderCellDef>Username</th>
+      <td mat-cell *matCellDef="let element">{{ element.username }}</td>
+    </ng-container>
+
+    <!-- Action Column-->
+    <ng-container matColumnDef="Action">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="primary">voir</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</section>
