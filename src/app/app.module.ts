@@ -9,6 +9,8 @@ import { EditionListComponent } from './admin/edition-list/edition-list.componen
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import { CandidatListComponent } from './admin/candidat/candidat-list/candidat-list.component';
+import { DialogCandidatComponent } from './admin/candidat/dialog-candidat/dialog-candidat.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -16,14 +18,17 @@ import { CandidatListComponent } from './admin/candidat/candidat-list/candidat-l
     AppComponent,
     EditionFormComponent,
     EditionListComponent,
-    CandidatListComponent
+    CandidatListComponent,
+    DialogCandidatComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -41,9 +41,11 @@
 
     <!--Action d'Edition Column-->
     <ng-container matColumnDef="Action">
-        <th mat-header-cell *matHeaderCellDef>Action</th>
-        <td mat-cell *matCellDef="let element"><button  mat-raised-button color="primary">voir</button></td>
-      </ng-container>
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="primary">voir</button>
+      </td>
+    </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>

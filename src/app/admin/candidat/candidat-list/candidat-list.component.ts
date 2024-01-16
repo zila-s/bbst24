@@ -1,5 +1,15 @@
 import { Component } from '@angular/core';
 import { Candidat } from 'src/app/_models/candidat';
+import {
+  MatDialog,
+  MAT_DIALOG_DATA,
+  MatDialogRef,
+  MatDialogTitle,
+  MatDialogContent,
+  MatDialogActions,
+  MatDialogClose,
+} from '@angular/material/dialog';
+import { DialogCandidatComponent } from '../dialog-candidat/dialog-candidat.component';
 
 @Component({
   selector: 'app-candidat-list',
@@ -18,6 +28,28 @@ export class CandidatListComponent {
   ];
 
   dataSource = listCandidat;
+
+  animal: any;
+  constructor(public dialog: MatDialog) {}
+
+  openDialog(candidat: Candidat): void {
+    const dialogRef = this.dialog.open(DialogCandidatComponent, {
+      data: {
+        nom: candidat.nom,
+        prenom: candidat.prenom,
+        email: candidat.email,
+        telephone: candidat.telephone,
+        localite: candidat.localite,
+        username: candidat.username,
+      },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+      this.animal = result;
+      console.log(this.animal);
+    });
+  }
 }
 
 const listCandidat: Candidat[] = [
