@@ -1,13 +1,41 @@
-<section>
-  <h1 mat-dialog-title>Hi {{ data.nom }}</h1>
+<section style="padding: 0 40px">
+  <h1 mat-dialog-title>Candidat : {{ data.nom }}</h1>
   <div mat-dialog-content>
-    <p>What's your favorite animal?</p>
-    
+    <div>
+      <div class="bbst-img">
+        <p>photo</p>
+      </div>
+      <div>
+        <p>
+          <strong>Nom : </strong> <span>{{ data.nom }}</span>
+        </p>
+        <mat-divider></mat-divider>
+        <p>
+          <strong>Prenom : </strong> <span>{{ data.prenom }}</span>
+        </p>
+        <mat-divider></mat-divider>
+        <p>
+          <strong>Username : </strong> <span>{{ data.username }}</span>
+        </p>
+      </div>
+    </div>
+    <div>
+      <mat-divider></mat-divider>
+      <p>
+        <strong>Localite : </strong> <span>{{ data.localite }}</span>
+      </p>
+      <mat-divider></mat-divider>
+      <p>
+        <strong>Email : </strong> <span>{{ data.email }}</span>
+      </p>
+      <mat-divider></mat-divider>
+      <p>
+        <strong>Telephone : </strong> <span>{{ data.telephone }}</span>
+      </p>
+    </div>
   </div>
   <div mat-dialog-actions>
-    <button mat-button (click)="onNoClick()">No Thanks</button>
-    <button mat-button [mat-dialog-close]="data.nom" cdkFocusInitial>
-      Ok
-    </button>
+    <button mat-button (click)="onNoClick()">Fermer</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
   </div>
 </section>

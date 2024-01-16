@@ -1,0 +1,44 @@
+<section style="width: 30%">
+  <mat-card>
+    <mat-card-content>
+      <h1>Se connecter</h1>
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <mat-form-field class="bbst-full-width">
+          <mat-label>Email</mat-label>
+          <input
+            type="email"
+            formControlName="email"
+            matInput
+            placeholder="Ex. john@exemple.com"
+          />
+
+          <mat-error>{{ getErrorEmail() }}</mat-error>
+
+          <!-- <mat-error>Email is <strong>required</strong></mat-error> -->
+        </mat-form-field>
+        <mat-form-field class="bbst-full-width">
+          <mat-label>Mot de passe</mat-label>
+          <input
+            [type]="hide ? 'password' : 'text'"
+            formControlName="mdp"
+            matInput
+            placeholder="Ex. john@exemple.com"
+          />
+          <button
+            mat-icon-button
+            type="button"
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+          <mat-error>Mot de passe requis</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button class="bbst-btn">Connexion</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</section>

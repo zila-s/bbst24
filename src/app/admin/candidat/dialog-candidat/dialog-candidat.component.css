@@ -1,0 +1,9 @@
+.bbst-img{
+    border: 1px solid #808fa2 ;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}

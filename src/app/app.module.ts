@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { EditionFormComponent } from './admin/edition/edition-form/edition-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditionListComponent } from './admin/edition-list/edition-list.component';
-import {MatTableModule} from '@angular/material/table';
-import {MatButtonModule} from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
 import { CandidatListComponent } from './admin/candidat/candidat-list/candidat-list.component';
 import { DialogCandidatComponent } from './admin/candidat/dialog-candidat/dialog-candidat.component';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { LoginComponent } from './admin/auth/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -20,6 +26,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     EditionListComponent,
     CandidatListComponent,
     DialogCandidatComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,10 +34,15 @@ import { MatDialogModule } from '@angular/material/dialog';
     BrowserAnimationsModule,
     MatTableModule,
     MatButtonModule,
-    MatDialogModule
-   
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatDividerModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
