@@ -18,6 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
+import { CategorieProjetComponent } from './admin/projet/categorie-projet/categorie-projet.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {MatDividerModule} from '@angular/material/divider';
     CandidatListComponent,
     DialogCandidatComponent,
     LoginComponent,
+    CategorieProjetComponent,
   ],
   imports: [
     BrowserModule,

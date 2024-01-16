@@ -1,38 +1,47 @@
 <section style="padding: 0 40px">
-  <h1 mat-dialog-title>Candidat : {{ data.nom }}</h1>
+  <h1 mat-dialog-title>Information sur le candidat</h1>
   <div mat-dialog-content>
-    <div>
-      <div class="bbst-img">
-        <p>photo</p>
-      </div>
-      <div>
-        <p>
-          <strong>Nom : </strong> <span>{{ data.nom }}</span>
-        </p>
-        <mat-divider></mat-divider>
-        <p>
-          <strong>Prenom : </strong> <span>{{ data.prenom }}</span>
-        </p>
-        <mat-divider></mat-divider>
-        <p>
-          <strong>Username : </strong> <span>{{ data.username }}</span>
-        </p>
-      </div>
-    </div>
-    <div>
-      <mat-divider></mat-divider>
-      <p>
-        <strong>Localite : </strong> <span>{{ data.localite }}</span>
-      </p>
-      <mat-divider></mat-divider>
-      <p>
-        <strong>Email : </strong> <span>{{ data.email }}</span>
-      </p>
-      <mat-divider></mat-divider>
-      <p>
-        <strong>Telephone : </strong> <span>{{ data.telephone }}</span>
-      </p>
-    </div>
+    <section style="display: flex;justify-content: space-evenly;">
+      <section style="margin: 8px;">
+        <!--Candidat Information-->
+        <div>
+          <div class="bbst-img">
+            <p>photo</p>
+          </div>
+          <div>
+            <p>
+              <strong>Nom : </strong> <span>{{ data.nom }}</span>
+            </p>
+            <mat-divider></mat-divider>
+            <p>
+              <strong>Prenom : </strong> <span>{{ data.prenom }}</span>
+            </p>
+            <mat-divider></mat-divider>
+            <p>
+              <strong>Username : </strong> <span>{{ data.username }}</span>
+            </p>
+          </div>
+        </div>
+        <div>
+          <mat-divider></mat-divider>
+          <p>
+            <strong>Localite : </strong> <span>{{ data.localite }}</span>
+          </p>
+          <mat-divider></mat-divider>
+          <p>
+            <strong>Email : </strong> <span>{{ data.email }}</span>
+          </p>
+          <mat-divider></mat-divider>
+          <p>
+            <strong>Telephone : </strong> <span>{{ data.telephone }}</span>
+          </p>
+        </div>
+      </section>
+      <mat-divider vertical="true"></mat-divider>
+      <section style="margin: 8px;">
+        <h1>Projets</h1>
+      </section>
+    </section>
   </div>
   <div mat-dialog-actions>
     <button mat-button (click)="onNoClick()">Fermer</button>
