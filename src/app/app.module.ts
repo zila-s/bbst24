@@ -17,11 +17,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
 import { CategorieProjetComponent } from './admin/projet/categorie-projet/categorie-projet.component';
 import { ListeProjetComponent } from './admin/projet/liste-projet/liste-projet.component';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatMenuModule } from '@angular/material/menu';
+import { SideBarComponent } from './admin/side-bar/side-bar.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import {MatMenuModule} from '@angular/material/menu';
     LoginComponent,
     CategorieProjetComponent,
     ListeProjetComponent,
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatIconModule,
     MatDividerModule,
     MatPaginatorModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent],

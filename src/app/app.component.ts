@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bbst24';
+  
 }
+
+//https://www.youtube.com/results?search_query=slide+bar
+
+//card slider
+
+//https://www.youtube.com/watch?v=qOO6lVMhmGc

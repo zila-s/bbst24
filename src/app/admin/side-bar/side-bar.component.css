@@ -1,0 +1,27 @@
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 82vh;
+  margin-top: 14px;
+}
+
+
+ul li {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+}
+
+ul li:hover {
+  background: #fafafa;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+ul li a {
+   font-size: 16px;
+   color: #000;
+}
