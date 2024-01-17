@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-categorie-projet',
@@ -8,5 +8,13 @@ import { FormControl } from '@angular/forms';
 })
 export class CategorieProjetComponent {
 
-  categorieProjet:FormControl = new FormControl('');
+  categorieForm = new FormGroup({
+    categorieProjet : new FormControl('',[Validators.required])
+  })
+
+  
+
+  enregistrer(){
+    console.log(this.categorieForm.get('categorieProjet')?.value)
+  }
 }

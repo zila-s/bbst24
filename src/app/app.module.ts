@@ -19,6 +19,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import { CategorieProjetComponent } from './admin/projet/categorie-projet/categorie-projet.component';
+import { ListeProjetComponent } from './admin/projet/liste-projet/liste-projet.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { CategorieProjetComponent } from './admin/projet/categorie-projet/catego
     DialogCandidatComponent,
     LoginComponent,
     CategorieProjetComponent,
+    ListeProjetComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,9 @@ import { CategorieProjetComponent } from './admin/projet/categorie-projet/catego
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatDividerModule
+    MatDividerModule,
+    MatPaginatorModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent],
