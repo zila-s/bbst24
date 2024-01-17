@@ -24,6 +24,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatMenuModule } from '@angular/material/menu';
 import { SideBarComponent } from './admin/side-bar/side-bar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { DashbordComponent } from './admin/dashbord/dashbord.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     CategorieProjetComponent,
     ListeProjetComponent,
     SideBarComponent,
+    DashbordComponent,
   ],
   imports: [
     BrowserModule,
