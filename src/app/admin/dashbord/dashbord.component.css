@@ -1,56 +1,82 @@
 .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu li {
-    padding: 8px;
-    margin-bottom: 7px;
-    background-color: #33b5e5;
-    color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  }
-  
-  .menu li:hover {
-    background-color: #0099cc;
-  }
-  
-  .aside {
-    background-color: #33b5e5;
-    padding: 15px;
-    color: #ffffff;
-    text-align: center;
-    font-size: 14px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-  .bbst-x{
-    background: linear-gradient(to top,  #0099cc 3%, #424343 3%);;
-    position: relative;
-    height: 15vh;
-    color: #fff;
-    padding: 8px;
-    border-radius: 4px;
-   
-  }
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
 
-  .all-items{
-    display: flex;
-    justify-content: start;
-    flex-wrap: wrap;
-    gap: 50px 60px;
-    flex: 1 1 auto;
-  }
+.menu li:hover {
+  background-color: #0099cc;
+}
 
-  @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-   .bbst-x{
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.bbst-x {
+  background: linear-gradient(to top, #0099cc 3%, #424343 3%);
+  position: relative;
+  height: 15vh;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.all-items {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 50px 60px;
+  flex: 1 1 auto;
+}
+
+.test-hover {
+  margin: 14px 0;
+  width: 350px;
+  height: 250px;
+  padding: 6px;
+  background: #515151;
+  color: wheat;
+  position: relative;
+  overflow: hidden;
+}
+
+.test-hover:hover .hover-body {
+  right: 0;
+}
+
+.hover-body {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  right: 350px;
+  background: #fff;
+  opacity: 0.5;
+  backdrop-filter: blur(5px);
+  transition: ease 1s;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .bbst-x {
     flex: 50%;
     height: auto;
-   }
-
-   .mat-mdc-table {
-    display: none !important;
-   }
   }
+
+  .mat-mdc-table {
+    display: none !important;
+  }
+}
