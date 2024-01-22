@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom:4px ;
 }
 
@@ -17,3 +18,11 @@ h1,p{
     margin: 0;
     padding: 0;
 }
+
+/* @media only screen and (max-width: 768px) {
+  
+
+   .mat-mdc-table {
+    display: none !important;
+   }
+  } */
