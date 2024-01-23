@@ -18,13 +18,13 @@
     <!-- Debut de soumission Column -->
     <ng-container matColumnDef="Debut de soumission">
       <th mat-header-cell *matHeaderCellDef>Debut de soumission</th>
-      <td mat-cell *matCellDef="let element">{{ element.debutSoumission }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.debutSoumission | date }}</td>
     </ng-container>
 
     <!-- Fin de soumission Column -->
     <ng-container matColumnDef="Fin de soumission">
       <th mat-header-cell *matHeaderCellDef>Fin de soumission</th>
-      <td mat-cell *matCellDef="let element">{{ element.finSoumission }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.finSoumission | date}}</td>
     </ng-container>
 
     <!-- SType d'Edition Column -->

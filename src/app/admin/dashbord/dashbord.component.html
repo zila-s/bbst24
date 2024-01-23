@@ -1,5 +1,5 @@
 <section style="padding: 2vw">
-  <section class="row">
+  <!-- <section class="row">
     <div class="col-3">
       <div class="bbst-x mat-elevation-z2">
         <h1>Edition</h1>
@@ -22,36 +22,61 @@
         <p>Nbr : 35</p>
       </div>
     </div>
-  </section>
-  <section class="row">
-    <div class="col-9">
-      <app-liste-projet></app-liste-projet>
+  </section> -->
+
+  <section class="bbst-container">
+    <div class="mat-elevation-z2 bbst-item-1">
+      <h1>Edition / Standards</h1>
+      <p>Nom de l'editon en cours</p>
+      <p>En cours...</p>
+    </div>
+    <div class="mat-elevation-z2 bbst-item-2">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+
+          flex-wrap: wrap;
+        "
+      >
+        <div class="bbst-nbr-candidats mat-elevation-z4">
+          <span>32</span>
+        </div>
+        <h1 style="margin-left: 24px">Candidats</h1>
+      </div>
+      <button style="width: 100%" mat-raised-button>
+        Consulter la liste des candidats
+      </button>
+    </div>
+    <div class="mat-elevation-z2 bbst-item-3">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          flex-wrap: wrap;
+        "
+      >
+        <div class="bbst-nbr-candidats mat-elevation-z4">
+          <span>22</span>
+        </div>
+        <h1>Projets preselectionnes</h1>
+      </div>
+      <button style="width: 100%" mat-raised-button>
+        Consulter la liste des projets
+      </button>
     </div>
   </section>
 
-  <section class="all-items">
-    <div class="bbst-x mat-elevation-z2">
-      <h1>Edition</h1>
-      <p>Type d'Edition</p>
-      <p>Nom de l'editon en cours</p>
-    </div>
-    <div class="bbst-x mat-elevation-z2">
-      <h1>Edition</h1>
-      <p>Type d'Edition</p>
-      <p>Nom de l'editon en cours</p>
-    </div>
-    <div class="bbst-x mat-elevation-z2">
-      <h1>Edition</h1>
-      <p>Type d'Edition</p>
-      <p>Nom de l'editon en cours</p>
-    </div>
+  <section class="bbst-projet-list">
+    <app-liste-projet></app-liste-projet>
   </section>
-
+<!-- 
   <div class="test-hover">
     <p class="hover-body">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quam quod
       voluptatibus optio eius incidunt, quasi ratione itaque laboriosam ex
       molestias quaerat aut est laborum tempore. At sed quas iusto.
     </p>
-  </div>
+  </div> -->
 </section>

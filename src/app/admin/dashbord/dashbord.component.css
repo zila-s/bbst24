@@ -25,21 +25,62 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.bbst-x {
-  background: linear-gradient(to top, #0099cc 3%, #424343 3%);
+/* .bbst-x {
+  background: linear-gradient(to right, #0099cc 3%, #fff 3%);
   position: relative;
   height: 15vh;
-  color: #fff;
-  padding: 8px;
-  border-radius: 4px;
-}
+  color: #000;
+  padding: 18px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+} */
 
-.all-items {
+.bbst-container {
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
-  gap: 50px 60px;
-  flex: 1 1 auto;
+  gap: 5vw 6vw;
+  margin-bottom: 24px;
+}
+
+[class*="bbst-item-"] {
+  /* background: linear-gradient(to right, #0099cc 1%, #fff 1%); */
+
+  background: linear-gradient(to right,#0099cc 1%,#212121 1%);
+  position: relative;
+  height: 15vh;
+  color: #fff;
+  padding: 18px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.bbst-item-1 {
+  width: 20vw;
+  /* background: linear-gradient(to right,#0099cc 1%,#E7E8EB 1%); */
+ 
+}
+
+.bbst-item-2 {
+  width: 20vw;
+}
+
+.bbst-nbr-candidats {
+  width: 55px;
+  height: 55px;
+  background: #41509C;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+
+.bbst-item-3 {
+  width: 20vw;
 }
 
 .test-hover {
@@ -69,9 +110,14 @@
   transition: ease 1s;
 }
 
+.bbst-projet-list{
+  width: 72vw;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  .bbst-x {
+
+  [class*="bbst-item-"] {
     flex: 50%;
     height: auto;
   }

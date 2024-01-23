@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EditionFormComponent } from './admin/edition/edition-form/edition-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EditionListComponent } from './admin/edition-list/edition-list.component';
+import { EditionListComponent } from './admin/edition/edition-list/edition-list.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { CandidatListComponent } from './admin/candidat/candidat-list/candidat-list.component';
@@ -23,8 +23,10 @@ import { ListeProjetComponent } from './admin/projet/liste-projet/liste-projet.c
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatMenuModule } from '@angular/material/menu';
 import { SideBarComponent } from './admin/side-bar/side-bar.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { DashbordComponent } from './admin/dashbord/dashbord.component';
+import { GestionEditionComponent } from './admin/edition/gestion-edition/gestion-edition.component';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -38,11 +40,14 @@ import { DashbordComponent } from './admin/dashbord/dashbord.component';
     ListeProjetComponent,
     SideBarComponent,
     DashbordComponent,
+    GestionEditionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    RouterLink,
+    RouterLinkActive,
     MatTableModule,
     MatButtonModule,
     MatDialogModule,
@@ -54,7 +59,7 @@ import { DashbordComponent } from './admin/dashbord/dashbord.component';
     MatDividerModule,
     MatPaginatorModule,
     MatMenuModule,
-    MatSidenavModule
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

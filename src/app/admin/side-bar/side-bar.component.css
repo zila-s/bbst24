@@ -10,18 +10,34 @@
 
 ul li {
   height: 40px;
+  width: 200px;
   display: flex;
   align-items: center;
-  padding-left: 8px;
+  padding-left: 14px;
 }
 
 ul li:hover {
-  background: #fafafa;
-  border-radius: 8px;
+  background: #e1f5fe;
+  /* border-radius: 8px; */
   cursor: pointer;
 }
 
 ul li a {
    font-size: 16px;
    color: #000;
+   width: 100%;
+  
+   padding: 8px 0;
+}
+
+/* .active{
+  backdrop-filter: blur(15px) !important;
+  background-color: #0267c1 !important; 
+ 
+  
+  border-radius: 8px;
+} */
+
+.active a {
+  color: #0267c1 !important;
 }
