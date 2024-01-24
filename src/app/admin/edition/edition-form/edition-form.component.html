@@ -1,5 +1,40 @@
 <section>
-  <form>
-    
+  <form [formGroup]="editionFormGroup" (ngSubmit)="onEditionSubmit()">
+    <mat-form-field class="bbst-full-width">
+      <mat-label>Entrer le theme</mat-label>
+      <input
+        type="text"
+        placeholder="Ex. Theme"
+        class="bbst-full-width"
+        matInput
+        formControlName="theme"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="bbst-full-width">
+      <mat-label>Entrer la date de debut et de fin de soumission</mat-label>
+      <mat-date-range-input [rangePicker]="picker">
+        <input
+          matStartDate
+          placeholder="Debut date"
+          formControlName="debutSoumission"
+        />
+        <input
+          matEndDate
+          placeholder="Fin date"
+          formControlName="finSoumission"
+        />
+      </mat-date-range-input>
+      <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+
+    <button mat-raised-button >Soumettre</button>
   </form>
+
+  <p>{{editionFormGroup.value | json}}</p>
 </section>

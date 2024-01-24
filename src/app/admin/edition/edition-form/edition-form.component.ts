@@ -1,20 +1,27 @@
+import { JsonPipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-edition-form',
   templateUrl: './edition-form.component.html',
-  styleUrls: ['./edition-form.component.css']
+  styleUrls: ['./edition-form.component.css'],
 })
 export class EditionFormComponent {
-  editionFormGroup!:FormGroup;
+  editionFormGroup!: FormGroup;
 
-  constructor(private fb:FormBuilder){}
+  constructor(private fb: FormBuilder) {}
 
-  ngOnInit():void{
+  ngOnInit(): void {
     this.editionFormGroup = this.fb.group({
-
+      theme: new FormControl(''),
+      debutSoumission: new FormControl<Date | null>(null),
+      finSoumission: new FormControl<Date | null>(null),
     });
+  }
+
+  onEditionSubmit() {
+    console.log(this.editionFormGroup.value);
   }
 }
 

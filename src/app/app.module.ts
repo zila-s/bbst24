@@ -27,6 +27,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { DashbordComponent } from './admin/dashbord/dashbord.component';
 import { GestionEditionComponent } from './admin/edition/gestion-edition/gestion-edition.component';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     MatPaginatorModule,
     MatMenuModule,
     MatSidenavModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent],
