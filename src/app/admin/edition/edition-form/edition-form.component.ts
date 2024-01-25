@@ -25,6 +25,12 @@ export class EditionFormComponent {
   selectedFile: any;
   nomFichier!: string;
 
+  selected = TypeEdition.ordinaire;
+
+  toppings = new FormControl('');
+
+  toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato']; 
+
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {

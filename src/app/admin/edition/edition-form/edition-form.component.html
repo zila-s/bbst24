@@ -1,5 +1,31 @@
 <section>
   <form [formGroup]="editionFormGroup" (ngSubmit)="onEditionSubmit()">
+    <mat-form-field>
+      <mat-label>Type d'Edition</mat-label>
+      <mat-select [(value)]="selected">
+        <mat-option value="ordinaire">Ordinaire</mat-option>
+        <mat-option value="speciale">Speciale</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <mat-label>Categorie Projet</mat-label>
+      <mat-select [formControl]="toppings" multiple>
+        <mat-select-trigger>
+          {{toppings.value?.[0] || ''}}
+          
+            <span *ngIf="(toppings.value?.length || 0) > 1" class="example-additional-selection">
+              (+{{(toppings.value?.length || 0) - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+            </span>
+       
+        </mat-select-trigger>
+       
+      <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+   
+      </mat-select>
+    </mat-form-field>
+
     <mat-form-field class="bbst-full-width">
       <mat-label>Entrer le theme</mat-label>
       <input
@@ -10,6 +36,8 @@
         formControlName="theme"
       />
     </mat-form-field>
+
+    
 
     <mat-form-field class="bbst-full-width">
       <mat-label>Entrer la date de debut et de fin de soumission</mat-label>
@@ -37,8 +65,22 @@
       <div #editor></div>
     </div> -->
 
-    <div (click)="fichierInput.click()"  style="display: flex;justify-content: center;align-items: center;gap: 4px;">
-      <button type="button" style="width: 160px; height: 50px;margin-bottom: 16px;" mat-raised-button>Choisir Fichier</button>
+    <div
+      (click)="fichierInput.click()"
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+      "
+    >
+      <button
+        type="button"
+        style="width: 160px; height: 50px; margin-bottom: 16px"
+        mat-raised-button
+      >
+        Choisir Fichier
+      </button>
       <mat-form-field class="bbst-full-width">
         <mat-label>Fichier</mat-label>
 
@@ -47,16 +89,22 @@
           placeholder="Ex. Theme"
           class="bbst-full-width"
           matInput
-          value="{{nomFichier}}"
+          value="{{ nomFichier }}"
           readonly
         />
       </mat-form-field>
     </div>
-    <input (change)="onFileSelected($event)" #fichierInput hidden type="file" id="file">
+    <input
+      (change)="onFileSelected($event)"
+      #fichierInput
+      hidden
+      type="file"
+      id="file"
+    />
 
     <button mat-raised-button>Soumettre</button>
   </form>
 
   <p>{{ editionFormGroup.value | json }}</p>
-  {{ t }}
+  {{ selected }}
 </section>
