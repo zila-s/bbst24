@@ -33,8 +33,30 @@
       <mat-date-range-picker #picker></mat-date-range-picker>
     </mat-form-field>
 
-    <button mat-raised-button >Soumettre</button>
+    <!-- <div style="background: #fafafa; width: 100%; height: 300px">
+      <div #editor></div>
+    </div> -->
+
+    <div (click)="fichierInput.click()"  style="display: flex;justify-content: center;align-items: center;gap: 4px;">
+      <button type="button" style="width: 160px; height: 50px;margin-bottom: 16px;" mat-raised-button>Choisir Fichier</button>
+      <mat-form-field class="bbst-full-width">
+        <mat-label>Fichier</mat-label>
+
+        <input
+          type="text"
+          placeholder="Ex. Theme"
+          class="bbst-full-width"
+          matInput
+          value="{{nomFichier}}"
+          readonly
+        />
+      </mat-form-field>
+    </div>
+    <input (change)="onFileSelected($event)" #fichierInput hidden type="file" id="file">
+
+    <button mat-raised-button>Soumettre</button>
   </form>
 
-  <p>{{editionFormGroup.value | json}}</p>
+  <p>{{ editionFormGroup.value | json }}</p>
+  {{ t }}
 </section>

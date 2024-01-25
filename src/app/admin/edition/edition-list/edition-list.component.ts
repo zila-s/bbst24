@@ -1,6 +1,6 @@
 import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { Edition } from 'src/app/_models/edition';
+import { Edition, Statut, TypeEdition } from 'src/app/_models/edition';
 
 @Component({
   selector: 'app-edition-list',
@@ -15,12 +15,17 @@ export class EditionListComponent {
     'Fin de soumission',
     "Type d'Edition",
     "Annee d'Edition",
-    "Action"
+    'Action',
   ];
 
   dataSource = listEdition;
-
+  srcResult: any;
   constructor() {}
+  ngOnInit(): void {
+    console.log(listEdition);
+  }
+
+  
 }
 
 const listEdition: Edition[] = [
@@ -29,31 +34,39 @@ const listEdition: Edition[] = [
     description: 'test',
     debutSoumission: new Date(2024, 1, 16),
     finSoumission: new Date(2024, 1, 30),
-    typeEdition: 'STANDARD',
+    typeEdition: TypeEdition.ordinaire,
     anneeEdition: '2024',
+    statut: Statut.attente,
+    categories: [0, 1, 2],
   },
   {
     theme: 'Force-N',
     description: 'semaine national de la culture',
     debutSoumission: new Date(2024, 1, 16),
     finSoumission: new Date(2024, 1, 30),
-    typeEdition: 'Special',
+    typeEdition: TypeEdition.speciale,
     anneeEdition: '2024',
+    statut: Statut.attente,
+    categories: [0, 1, 2],
   },
   {
     theme: 'Force-N',
     description: 'semaine national de la culture',
     debutSoumission: new Date(2024, 1, 16),
     finSoumission: new Date(2024, 1, 30),
-    typeEdition: 'Special',
+    typeEdition: TypeEdition.ordinaire,
     anneeEdition: '2024',
+    statut: Statut.attente,
+    categories: [0, 1, 2],
   },
   {
     theme: 'Force-N',
     description: 'semaine national de la culture',
     debutSoumission: new Date(2024, 1, 16),
     finSoumission: new Date(2024, 1, 30),
-    typeEdition: 'Special',
+    typeEdition: TypeEdition.ordinaire,
     anneeEdition: '2024',
+    statut: Statut.attente,
+    categories: [0, 1, 2],
   },
 ];

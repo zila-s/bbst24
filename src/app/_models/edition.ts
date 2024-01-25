@@ -1,8 +1,22 @@
 export class Edition {
-    theme!:string;
-    description!:string;
-    debutSoumission!:Date;
-    finSoumission!:Date;
-    typeEdition!:String;
-    anneeEdition!:string;
+  categories!: number[];
+  theme!: string;
+  description!: string;
+  debutSoumission!: Date;
+  finSoumission!: Date;
+  typeEdition!: TypeEdition;
+  statut!: Statut;
+  anneeEdition!: string;
+}
+
+export enum TypeEdition {
+  speciale = 'special',
+  ordinaire = 'ordinaire',
+}
+
+export enum Statut {
+  attente = 'en_attente',
+  cours = 'en_cours',
+  termine = 'termine',
+  annule = 'annule',
 }
