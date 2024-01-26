@@ -30,6 +30,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
+import { CategorieFormComponent } from './admin/categories/categorie-form/categorie-form.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { MatSelectModule } from '@angular/material/select';
     SideBarComponent,
     DashbordComponent,
     GestionEditionComponent,
+    CategorieFormComponent,
   ],
   imports: [
     BrowserModule,

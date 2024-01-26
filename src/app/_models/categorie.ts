@@ -1,4 +1,6 @@
 export class Categorie {
-    nom!:string;
-    description!:string;
+  id!: number;
+  nom!: string;
+  description!: string;
+  slug!: string;
 }

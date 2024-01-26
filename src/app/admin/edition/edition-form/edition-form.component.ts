@@ -27,9 +27,14 @@ export class EditionFormComponent {
 
   selected = TypeEdition.ordinaire;
 
-  toppings = new FormControl('');
-
-  toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato']; 
+  toppingList: string[] = [
+    'Extra cheese',
+    'Mushroom',
+    'Onion',
+    'Pepperoni',
+    'Sausage',
+    'Tomato',
+  ];
 
   constructor(private fb: FormBuilder) {}
 
@@ -38,6 +43,7 @@ export class EditionFormComponent {
       theme: new FormControl(''),
       debutSoumission: new FormControl<Date | null>(null, []),
       finSoumission: new FormControl<Date | null>(null),
+      toppings: new FormControl(''),
     });
 
     // this.initializeEditor();
@@ -62,6 +68,7 @@ export class EditionFormComponent {
 
   onEditionSubmit() {
     console.log(this.editionFormGroup.value);
+
   }
 
   // initializeEditor() {
